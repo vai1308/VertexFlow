@@ -17,7 +17,7 @@ export const app = express();
 const currentFile = fileURLToPath(import.meta.url);
 const currentDirectory = path.dirname(currentFile);
 const clientDistPath = path.resolve(currentDirectory, "../../client/dist");
-const defaultOrigins = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:5174", "http://127.0.0.1:5174"];
+const defaultOrigins = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:5174", "http://127.0.0.1:5174", "https://vertex-flow-roan.vercel.app"];
 const allowedOrigins = (process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIGIN || defaultOrigins.join(","))
   .split(",")
   .map((origin) => origin.trim())
